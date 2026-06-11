@@ -3,7 +3,7 @@ var msg = document.getElementById("message");
 var str = document.getElementById("strength");
 
 pass.addEventListener("input", () => {
-   if(pass.ariaValueMax.length >0){
+   if(pass.value.length >0){
     msg.style.display = "block";
    }
 
@@ -11,13 +11,13 @@ pass.addEventListener("input", () => {
     msg.style.display = "none";
    }
 
-   if(pass.ariaValueMax.length < 4){
+   if(pass.value.length < 4){
     str.innerHTML= "weak";
     pass.style.borderColor = '#ff5925';
     msg.style.color = '#ff5925';
    }
 
-   else if(pass.ariaValueMax.length >= 4 && pass.value.length < 8){
+   else if(pass.value.length >= 4 && pass.value.length < 8){
     str.innerHTML = 'medium';
     pass.style.borderColor = '#ff5925';
     msg.style.color = '#ff5925';

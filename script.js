@@ -1,8 +1,8 @@
-const password = document.getElementById("password");
-const strengthBar = document.getElementById("strength-bar");
-const strengthText = document.getElementById("strength-text");
+var pass = document.getElementById("password");
+var msg = document.getElementById("message");
+var str = document.getElementById("strength");
 
-password.addEventListener("input", () => {
+pass.addEventListener("input", () => {
     let value = password.value;
     let strength = 0;
 

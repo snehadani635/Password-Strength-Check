@@ -21,9 +21,6 @@
     position: relative;
 }
 
-h2{
-    margin-bottom:20px;
-}
 
 .input-box input{
     width:100%;
@@ -63,21 +60,3 @@ button img{
     font-size: 15px;
 }
 
-.strength-box{
-    width:100%;
-    height:10px;
-    background:#ddd;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-#strength-bar{
-    height:100%;
-    width:0;
-    transition:0.3s;
-}
-
-#strength-text{
-    margin-top:12px;
-    font-weight:bold;
-}

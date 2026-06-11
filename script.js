@@ -3,39 +3,29 @@ var msg = document.getElementById("message");
 var str = document.getElementById("strength");
 
 pass.addEventListener("input", () => {
-    let value = password.value;
-    let strength = 0;
+   if(pass.ariaValueMax.length >0){
+    msg.style.display = "block";
+   }
 
-    if(value.length >= 8) strength++;
-    if(/[A-Z]/.test(value)) strength++;
-    if(/[a-z]/.test(value)) strength++;
-    if(/[0-9]/.test(value)) strength++;
-    if(/[^A-Za-z0-9]/.test(value)) strength++;
+   else{
+    msg.style.display = "none";
+   }
 
-    switch(strength){
-        case 0:
-            strengthBar.style.width = "0%";
-            strengthText.textContent = "Strength: None";
-            break;
+   if(pass.ariaValueMax.length < 4){
+    str.innerHTML= "weak";
+    pass.style.borderColor = '#ff5925';
+    msg.style.color = '#ff5925';
+   }
 
-        case 1:
-        case 2:
-            strengthBar.style.width = "33%";
-            strengthBar.style.background = "red";
-            strengthText.textContent = "Strength: Weak";
-            break;
+   else if(pass.ariaValueMax.length >= 4 && pass.value.length < 8){
+    str.innerHTML = 'medium';
+    pass.style.borderColor = '#ff5925';
+    msg.style.color = '#ff5925';
+   }
 
-        case 3:
-        case 4:
-            strengthBar.style.width = "66%";
-            strengthBar.style.background = "orange";
-            strengthText.textContent = "Strength: Medium";
-            break;
-
-        case 5:
-            strengthBar.style.width = "100%";
-            strengthBar.style.background = "green";
-            strengthText.textContent = "Strength: Strong";
-            break;
-    }
+   else if(pass.value.length >= 8){
+    str.innerHTML = "strong";
+    pass.style.borderColor = '#26d736';
+    msg.style.color = "#26d736";
+   }
 });

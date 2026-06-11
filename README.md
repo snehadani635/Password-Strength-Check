@@ -2,6 +2,10 @@
 
 A simple and responsive Password Strength Checker built using HTML, CSS, and JavaScript. This project checks the strength of a password in real time and classifies it as Weak, Medium, or Strong based on its length.
 
+## 📸 Screenshot
+
+![Password Strength Checker](_pass_str.png)
+
 ## 🚀 Features
 
 - Real-time password strength detection
